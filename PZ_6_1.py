@@ -5,20 +5,16 @@
 def increase_even_numbers(lst):
     # Создаем список четных чисел из исходного списка
     even_numbers = [x for x in lst if x % 2 == 0]
-
     # Если нет четных чисел, возвращаем исходный список без изменений
     if not even_numbers:
         return lst
 
     # Берем первое четное число из списка четных чисел
     first_even = even_numbers[0]
-
     # Увеличиваем все четные числа на значение первого четного числа
     result = [x + first_even if x % 2 == 0 else x for x in lst]
-
     # Возвращаем результат
     return result
-
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = increase_even_numbers(numbers)
